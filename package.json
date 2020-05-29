@@ -1,0 +1,23 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "A CLI application that dynamically generates a README.md from a user's input.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avnoto/README-Generator.git"
+  },
+  "author": "Alexandra Noto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/avnoto/README-Generator/issues"
+  },
+  "homepage": "https://github.com/avnoto/README-Generator#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "inquirer": "^7.1.0"
+  }
+}
