@@ -2,8 +2,6 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const axios = require('axios');
 
-//function writeToFile(fileName, data) {}
-
 inquirer
   .prompt([
     {
@@ -28,19 +26,9 @@ inquirer
             },
           },
           {
-            message:
-              'Is the name of your project the same as your repository name?',
-            type: 'confirm',
-            default: true,
-            name: 'projectNameSame',
-          },
-          {
-            message: 'Enter a different title for your project.',
+            message: 'Enter a title for your project.',
             type: 'input',
-            name: 'projectNameGithub',
-            when: function (data) {
-              return data.projectNameSame === false;
-            },
+            name: 'projectName',
           },
           {
             message: 'Enter a description for your project.',
@@ -51,11 +39,6 @@ inquirer
 
         .then(function () {
           inquirer.prompt([
-            {
-              message: 'What are the installation instructions?',
-              type: 'input',
-              name: 'projectInstallation',
-            },
             {
               message: 'What tools were used for your project?',
               type: 'checkbox',
@@ -73,16 +56,17 @@ inquirer
               ],
             },
             {
+              message:
+                'What are the installation instructions? To break down instructions into a list, separate each step with a ";".',
+              type: 'input',
+              name: 'projectInstallation',
+            },
+            {
               message: 'How do you use the program?',
               type: 'input',
               name: 'projectUsage',
             },
-            {
-              message:
-                'What are the support instructions? If there are none, press Enter.',
-              type: 'input',
-              name: 'projectSupportInstructions',
-            },
+
             {
               message:
                 'What are the contributing instructions? If there are none, press Enter.',
@@ -97,17 +81,34 @@ inquirer
             },
             {
               message:
-                'Provide an email address so that the user can contact with you with any questions or concerns.',
+                'Please provide any proposed features for future development. If this does not apply, press Enter.',
+              type: 'input',
+              name: 'projectRoadmap',
+            },
+            {
+              message:
+                'Provide an email address so that the user can contact with you with any questions.',
               type: 'input',
               name: 'projectContact',
             },
             {
               message:
-                'Provide an email address so that the user can contact with you with any questions or concerns.',
+                'Are there any authors or contributors you would like to credit? Please list names followed by a ";". If you want to credit a website, provide the website address in quotations.',
               type: 'input',
-              name: 'projectContact',
+              name: 'projectAcknowlegements',
             },
           ]);
+          // .then(function (data) {
+          //   const fileName = data.projectName;
+          // });
         });
     });
   });
+
+// function writeToFile(fileName, data) {
+//   fs.writeFile('README.md', data, (err) => {
+//     if (err) throw err;
+
+//     console.log('READ.me saved!');
+//   });
+// }
