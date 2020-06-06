@@ -2,6 +2,7 @@ function generateMarkdown(data) {
   return `
   # ${data.projectName}
 
+  Developed by: ${data.username}
 
   ## Table of Contents
 
