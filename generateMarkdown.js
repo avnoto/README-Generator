@@ -6,16 +6,16 @@ function generateMarkdown(data) {
 
   ## Table of Contents
 
-  * [About the Project](#about-the-project)
-    * [Built With](#built-with)
-  * [Installation](#installation)
-  * [Usage](#usage)
-  * [Roadmap](#roadmap)
-  * [Contributing](#contributing)
-  * [License](#license)
-  * [Support](#support)
-    * [Contact](#contact)
-  * [Acknowledgements](#acknowledgements)
+  - [About the Project](#about-the-project)
+    - [Built With](#built-with)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Roadmap](#roadmap)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [Support](#support)
+    - [Contact](#contact)
+  - [Acknowledgements](#acknowledgements)
 
   ## About the Project
 
@@ -49,7 +49,7 @@ function generateMarkdown(data) {
 
   ## Support
 
-  Please [open an issue](https://github.com/${data.username}/${data.githubRepos}/issues) for support.
+  Please [open an issue](https://github.com/${data.username}//issues) for support.
 
   ### Contact
 

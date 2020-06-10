@@ -18,6 +18,7 @@ const questions = [
     message: 'Enter a description for your project.',
     type: 'input',
     name: 'projectDescription',
+    default: 'None',
   },
 
   {
@@ -37,33 +38,32 @@ const questions = [
     ],
   },
   {
-    message:
-      'What are the installation instructions? To break down instructions into a list, separate each step with a ";".',
+    message: 'What are the installation instructions?',
     type: 'input',
     name: 'projectInstallation',
+    default: 'None',
   },
   {
     message: 'How do you use the program?',
     type: 'input',
     name: 'projectUsage',
+    default: 'None',
   },
 
   {
-    message:
-      'What are the contributing instructions? If there are none, press Enter.',
+    message: 'What are the contributing instructions?',
     type: 'input',
     name: 'projectContributingInstructions',
+    default: 'None',
   },
   {
-    message:
-      'How is your project licensed? If this does not apply, press Enter.',
+    message: 'How is your project licensed?',
     type: 'input',
     name: 'projectLicense',
     default: 'None',
   },
   {
-    message:
-      'Please provide any proposed features for future development. If this does not apply, press Enter.',
+    message: 'Please provide any proposed features for future development.',
     type: 'input',
     name: 'projectRoadmap',
     default: 'None',
@@ -75,10 +75,10 @@ const questions = [
     name: 'projectContact',
   },
   {
-    message:
-      'Are there any authors or contributors you would like to credit? Please list names followed by a ";". If you want to credit a website, provide the website address in quotations.',
+    message: 'Are there any authors or contributors you would like to credit?',
     type: 'input',
     name: 'projectAcknowledgements',
+    default: 'None',
   },
 ];
 function writeToFile(fileName, data) {
@@ -87,7 +87,7 @@ function writeToFile(fileName, data) {
 
 function init() {
   inquirer.prompt(questions).then((res) => {
-    writeToFile('readme.md', generateMarkdown({ ...res }));
+    writeToFile('README.md', generateMarkdown({ ...res }));
   });
 }
 
