@@ -52,7 +52,9 @@ The user will be asked a series of questions. If the user does not answer a ques
 
 ## Support
 
-Please contact me at alexandravnoto@gmail.com with any questions or concerns.
+Please [open an issue](https://github.com/avnoto/README-Generator/issues/new) for support.
+
+Contact me at alexandravnoto@gmail.com with any questions or concerns.
 
 ## Acknowledgements
 

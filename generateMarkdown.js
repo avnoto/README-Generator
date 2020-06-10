@@ -1,3 +1,8 @@
+function generateRepoName(projectName) {
+  const repoName = projectName.split(' ').join('-');
+  return `${repoName}`;
+}
+
 function generateMarkdown(data) {
   return `
   [![Issues][issues-shield]][issues-url]
@@ -51,7 +56,9 @@ function generateMarkdown(data) {
 
   ## Support
 
-  Please [open an issue](https://github.com/${data.username}//issues) for support.
+  Please [open an issue](https://github.com/${data.username}/${generateRepoName(
+    data.projectName
+  )}/issues/new) for support.
 
   ### Contact
 
