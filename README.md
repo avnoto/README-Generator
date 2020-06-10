@@ -30,6 +30,7 @@ The user will be asked a series of questions. If the user does not answer a ques
 - Support
 - Contact
 - Acknowledgements
+- Issues badge specific to the repository
 
 ## Support
 

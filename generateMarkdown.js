@@ -1,5 +1,7 @@
 function generateMarkdown(data) {
   return `
+  [![Issues][issues-shield]][issues-url]
+
   # ${data.projectName}
 
   Developed by: ${data.username}
