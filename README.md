@@ -11,7 +11,25 @@ A CLI Application that generates a good README for your project. Built with Node
 
 ## Installation
 
-First, install dependencies by typing "npm i" in the application folder's terminal. Then, to run the application, type "node index" in the same terminal.
+1. Clone the repo
+
+```sh
+git clone https://github.com/avnoto/README-Generator.git
+```
+
+2. Open the terminal in the application folder
+
+3. Install NPM Packages
+
+```sh
+npm i
+```
+
+4. Run the application
+
+```sh
+node index
+```
 
 ## Usage
 
